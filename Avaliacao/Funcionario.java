@@ -24,7 +24,7 @@ public class Funcionario extends Pessoa {
     public static void main(String[] args) {
         try {
             Funcionario f = null;
-            f = new Funcionario("Guilherme", "Evaristo", "142.525.674-08", "guilherme.evaristo.paz@gmail.com", "Rua campo alegre", "Progrmador java" );
+            f = new Funcionario("Guilherme", "Evaristo", "111.222.333-44", "guilherme.evaristo.paz@gmail.com", "Rua campo alegre", "Progrmador java" );
 
             System.out.println("Nome do funcionário: " + f.getNome());
             System.out.println("Sobrenome do funcionário: " + f.getSobrenome());

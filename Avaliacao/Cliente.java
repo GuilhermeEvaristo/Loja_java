@@ -10,7 +10,7 @@ public class Cliente extends Pessoa {
     public static void main(String[] args) {
         try {
             Cliente c = null;
-            c = new Cliente("Guilherme", "Evaristo", "142.525.674-08", "guilherme.evaristo.paz@gmail.com", "Rua campo alegre");
+            c = new Cliente("Guilherme", "Evaristo", "111.222.333-44", "guilherme.evaristo.paz@gmail.com", "Rua campo alegre");
 
             System.out.println("Nome do Cliente: " + c.getNome());
             System.out.println("Sobrenome do Cliente: " + c.getSobrenome());
