@@ -3,38 +3,38 @@ package Avaliacao;
 public class Produto{
 
 private String tipo;
-private char tamanho;
+private String tamanho;
 private double valor;
 private int	quantidade;
 private String cor;
 
-public Produto(String tipo, char tamanho, double valor, int quantidade, String cor){
+public Produto(String tipo, String tamanho, double valor, int quantidade, String cor){
 	this.setTipo(tipo);
 	this.setTamanho(tamanho);
 	this.setValor(valor);
 	this.setQuantidade(quantidade);
-	tihs.setCor(cor);
+	this.setCor(cor);
 }
 
 public String getTipo(){
 	return this.tipo;
 }
 
-public void setTipo(String tipo) throws DadoInvalidoException{
+public void setTipo(String tipo){ 
 	if(tipo == null){
-		throw DadoInvalidoException;
+		System.out.println("Erro");
 	}
 
 	this.tipo = tipo;
 }
 
-public char getTamanho(){
+public String getTamanho(){
 	return this.tamanho;
 }
 
-public void setTamanho(char tamanho){
+public void setTamanho(String tamanho){
 	if(tamanho == null){
-		throw DadoInvalidoException;
+		System.out.println("Erro");
 	}
 	
 	this.tamanho = tamanho;
@@ -45,8 +45,8 @@ public double getValor(){
 }
 
 public void setValor(double valor){
-	if(valor == null){
-		throw DadoInvalidoException;
+	if(valor == 0){
+		System.out.println("Erro");
 	}
 
 	this.valor = valor;
@@ -57,23 +57,27 @@ public int getQuantidade(){
 }
 
 public void setQuantidade(int quantidade){
-	if(quantidade == null){
-		throw DadoInvalidoException;
+	if(quantidade == 0){
+		System.out.println("Erro");
 	}
 
 	this.quantidade = quantidade;
 }
 
 public String getCor(){
-	return this.cor
+	return this.cor;
 }
 
 public void setCor(String cor){
 	if (cor == null) {
-		throw DadoInvalidoException;
+		System.out.println("Erro");
 	}
 
 	this.cor = cor;
+}
+
+public static void main(String[] args) {
+	
 }
 
 }

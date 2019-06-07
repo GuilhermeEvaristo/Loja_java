@@ -21,23 +21,5 @@ public class Funcionario extends Pessoa {
         this.funcao = funcao;
     }
 
-    public static void main(String[] args) {
-        try {
-            Funcionario f = null;
-            f = new Funcionario("Guilherme", "Evaristo", "111.222.333-44", "guilherme.evaristo.paz@gmail.com", "Rua campo alegre", "Progrmador java" );
-
-            System.out.println("Nome do funcionário: " + f.getNome());
-            System.out.println("Sobrenome do funcionário: " + f.getSobrenome());
-            System.out.println("Cpf do funcionário: " + f.getCpf());
-            System.out.println("E-mail do funcionário: " + f.getEmail());
-            System.out.println("Endereço do funcionário: " + f.getEndereco());
-            System.out.println("Função do funcionário: " + f.getFuncao());
-
-
-            Pessoa p = f;
-
-        } catch (DadoInvalidoException ex) {
-            ex.printStackTrace();
-        }
-    }
+    
 }
