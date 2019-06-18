@@ -1,83 +1,68 @@
 package Avaliacao;
 
 public class Produto{
+	public int codigo;
+	public String nome;
+	public double valor;
+	public int quantEstoque;
 
-private String tipo;
-private String tamanho;
-private double valor;
-private int	quantidade;
-private String cor;
 
-public Produto(String tipo, String tamanho, double valor, int quantidade, String cor){
-	this.setTipo(tipo);
-	this.setTamanho(tamanho);
-	this.setValor(valor);
-	this.setQuantidade(quantidade);
-	this.setCor(cor);
-}
-
-public String getTipo(){
-	return this.tipo;
-}
-
-public void setTipo(String tipo){ 
-	if(tipo == null){
-		System.out.println("Erro");
+	//contrutor da classe
+	public Produto(int codigo ,String nome,double valor, int quantEstoque){
+		this.setCodigo(codigo);
+		this.setNome(nome);
+		this.setValor(valor);
+		this.setQuantEstoque(quantEstoque);
 	}
 
-	this.tipo = tipo;
-}
-
-public String getTamanho(){
-	return this.tamanho;
-}
-
-public void setTamanho(String tamanho){
-	if(tamanho == null){
-		System.out.println("Erro");
-	}
-	
-	this.tamanho = tamanho;
-}
-
-public double getValor(){
-	return this.valor;
-}
-
-public void setValor(double valor){
-	if(valor == 0){
-		System.out.println("Erro");
+	// 
+	//@@@@@@@ GETS E SETS 
+	// 
+	public void setCodigo(int codigo){
+		this.codigo = codigo;
 	}
 
-	this.valor = valor;
-}
 
-public int getQuantidade(){
-	return this.quantidade;
-}
-
-public void setQuantidade(int quantidade){
-	if(quantidade == 0){
-		System.out.println("Erro");
+	public int getCodigo(){
+		return this.codigo;
 	}
 
-	this.quantidade = quantidade;
-}
-
-public String getCor(){
-	return this.cor;
-}
-
-public void setCor(String cor){
-	if (cor == null) {
-		System.out.println("Erro");
+	public void setNome(String nome){
+		this.nome = nome;
 	}
 
-	this.cor = cor;
-}
 
-public static void main(String[] args) {
-	
-}
+	public String getNome(){
+		return this.nome;
+	}
+
+	public void setValor(double valor){
+		this.valor = valor;
+	}
+
+
+	public double getvalor(){
+		return this.valor;
+	}
+
+	public void setQuantEstoque(int quantEstoque){
+		this.quantEstoque = quantEstoque;
+	}
+
+	public int getQuantEstoque(){
+		return this.quantEstoque;
+	}
+
+	/*##############################################*/
+
+	//retira da quantidade em estoque o valor passado
+	public void retirarUnidade(int comprado){
+		this.quantEstoque -= comprado;
+	}
+
+	//adiciona a quantidade em estoque o valor passado
+	public void adicionarUnidade(int adicionar){
+		this.quantEstoque += adicionar;
+	}
 
 }
